@@ -1,0 +1,15 @@
+<div class="form-group container">
+    <ul id="listOfMessages">
+        <li class="singleMessage" *ngFor="let message of messageList">
+            {{message}}
+        </li>
+    </ul>
+
+    <form (ngSubmit)="onSubmit()" action="">
+        <div class="form-group mb-3 fixed-bottom d-flex">
+            <input class="form-control input" type="text" autocomplete="off" required [(ngModel)]="model.msg"
+                name="msg" />
+            <button type="submit" class="btn btn-outline-primary mt-3 mr-50">MESSAGE</button>
+        </div>
+    </form>
+</div>
